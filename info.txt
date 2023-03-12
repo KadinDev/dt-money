@@ -1,0 +1,64 @@
+- npm create vite@latest
+- npm i - instalar dependências
+
+=====================================================
+Limpando:
+- na pasta src remove os arquivos css
+
+No main.tsx deixa assim:
+    import React from 'react'
+    import ReactDOM from 'react-dom/client'
+    import { App }  from './App'
+
+    ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+    )
+
+No App.tsx deixa assim:
+    export function App() {
+        return (
+            <h1>Hello Word</h1>
+        )
+    }
+
+PROJETO PRONTO PARA DAR INICIO
+
+-> npm run dev <- ( RODAR PROJETO )
+
+=======================================================
+
+    npm i styled-components
+    npm i @types/styled-components -D
+    npm i phosphor-react
+    npm i react-hook-form zod
+    npm i @hookform/resolvers
+    npm i axios
+    
+=======================================================
+Para o modal usei uma lib que peguei no site:
+    https://www.radix-ui.com/docs/primitives/overview/animation
+
+LIB da Dialog - para fazer o Modal
+    npm install @radix-ui/react-dialog
+
+LIB para Radio
+    npm i @radix-ui/react-radio-group
+=======================================================
+
+Para simular um Back End
+https://www.npmjs.com/package/json-server
+
+    npm i json-server -D
+    
+e criei o arquivo server.json
+o json-server é somente para ambiente de desenvolvimento, em produção não usamos
+
+
+===================================================
+Lib para eu renderizar componentes selecionados
+evitar de renderizar componente desnecessário de uma página
+deixando o React mais perfomatico, rápido
+    
+    npm i use-context-selector react scheduler
